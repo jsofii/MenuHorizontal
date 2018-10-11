@@ -1,0 +1,53 @@
+<div class="tutorial">
+  <ul>
+
+    <li>Blog</li>
+    <li [routerLinkActive]='["link-active"]'>
+      <a [routerLink]='["/fetch-data"]' (click)='collapse()'>
+        <span class='glyphicon glyphicon-th-list'></span> Datos
+      </a>
+    </li>
+    <li [routerLinkActive]='["link-active"]'>
+      <a [routerLink]='["/usuarios"]' (click)='collapse()'>
+        <span class='glyphicon glyphicon-th-list'></span> Usuarios!
+      </a>
+    </li>
+    <li>Gestión<i class="fa fa-angle-down"></i>
+      <ul>
+        <li [routerLinkActive]='["link-active"]'>
+          <a [routerLink]='["/actualizar"]' (click)='collapse()'>
+            <span class='glyphicon glyphicon-th-list'></span> Actualizar
+          </a>
+        </li>
+        
+        <li [routerLinkActive]='["link-active"]'>
+          <a [routerLink]='["/fetch-data"]' (click)='collapse()'>
+            <span class='glyphicon glyphicon-th-list'></span> Insertar
+          </a>
+        </li>
+        <li [routerLinkActive]='["link-active"]'>
+          <a [routerLink]='["/usuarios"]' (click)='collapse()'>
+            <span class='glyphicon glyphicon-th-list'></span> Eliminar
+          </a>
+        </li>
+        
+
+        <li>Website Design </li>
+        <li>Python Programming</li>
+        <li>PHP Programming</li>
+      </ul>
+    </li>
+    <li>Tutorials <i class="fa fa-angle-down"></i>
+      <ul>
+        <li>CSS <span>12 Available</span></li>
+        <li>HTML <span>9 Available</span></li>
+        <li>Jade<span>3 Available</span></li>
+        <li>Javascript<span>21 Available</span></li>
+        <li>Design<span>37 Available</span></li>
+      </ul>
+    </li>
+    <li>Contact</li>
+  </ul>
+  <div class="slider"></div>
+  
+</div>

@@ -1,0 +1,92 @@
+<div class="container">
+  <h2>INGRESO DE USUARIOS</h2>
+ 
+  <form (ngSubmit)="add() ">
+    <div class="form-group">
+      <label for="id usuario">id usuario:</label>
+      <input type="id usuario" class="form-control" [(ngModel)]="idusuario" id="id usuario" placeholder="enter id usuario"
+        name="idusuario">
+    </div>
+    <div class="form-group">
+      <label for="email">nombre usuario:</label>
+      <input type="email" class="form-control" [(ngModel)]="nombreUsuario" id="nombreusuario" placeholder="Enter nombre"
+        name="email">
+    </div>
+
+    <div class="form-group">
+      <label for="email">nombre:</label>
+      <input type="email" class="form-control" [(ngModel)]="nombre" id="nombre" placeholder="Enter nombre" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">apellidos:</label>
+      <input type="apelldios" class="form-control" [(ngModel)]="apellidos" id="apellido" placeholder="Enter apellidos"
+        name="pwd">
+    </div>
+    <div class="form-group">
+      <label for="pwd">password:</label>
+      <input type="password" class="form-control" [(ngModel)]="password" id="pwd" placeholder="Enter password" name="pwd">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"> constraseña</label>
+    </div>
+    <button type="submit" class="btn btn-primary">INGRESAR</button>
+    <form id="myForm">
+      <input type="button" onclick="formReset()" value="Reset">
+    </form>
+  </form>
+
+</div>
+
+
+<h1>Lista de Usuarios</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre Usuario</th>
+      <th>Nombre</th>
+      <th>Apellidos</th>
+      <th>Password</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of usuarios">
+      <td> {{ user.idUsuario }}</td>
+      <td> {{ user.nombreUsuario }}</td>
+      <td>{{ user.nombre }}</td>
+      <td>{{ user.apellidos }}</td>
+      <td>{{ user.password }}</td>
+
+
+    </tr>
+    <button (click)=mostrar()>Mostrar</button>
+  </tbody>
+</table>
+
+<!-- <table class="rwd-table">
+  <tr>
+    <th>idusuario</th>
+    <th>nombreusuario</th>
+    <th>nombre</th>
+    <th>apellidos</th>
+    <th>password</th>
+  </tr>
+  
+  <tr>
+    <ul *ngFor="let user of usuarios">
+
+      <li >
+        {{ user.idUsuario }}
+      </li>
+      <li >
+        {{ user.nombreUsuario }}
+      </li>
+    </ul> 
+    
+     
+    
+  </tr>
+ 
+</table> -->
+
+

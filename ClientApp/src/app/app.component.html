@@ -1,0 +1,17 @@
+<div class='container-fluid'>
+  <div *ngIf="!log">
+    <div>
+        <app-login (visible)="Cambiar($event)"></app-login>
+        <!-- <button (click)="log=!log"> ENTRAR </button> -->
+    </div>
+    
+  </div>
+  <div class='row' *ngIf="log">
+    <div>
+      <app-menu></app-menu>
+    </div>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
